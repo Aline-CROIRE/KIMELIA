@@ -53,7 +53,6 @@ if (process.env.NODE_ENV === "production") {
 
 
 app.listen(PORT, () => {
-  console.log("Server is running on http://localhost:" + PORT)
-  connectDB()
-})
-
+ app.listen(PORT, () => {
+  console.log(`Server is running on ${process.env.NODE_ENV === "production" ? "Render URL" : "http://localhost:" + PORT}`);
+});
