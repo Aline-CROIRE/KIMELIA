@@ -7,7 +7,9 @@ export default defineConfig({
     host: true,  // Allow external access if needed
     port: 5173,
   },
+  
   build: {
+    chunkSizeWarningLimit: 1000,
     outDir: "dist", // Ensure output goes to "dist"
   },
 });
